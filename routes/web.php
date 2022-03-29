@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/coalition-form', function () {
     return view('coalition-form');
 });
+
+Route::post("/coalition-form", [LandingController::class, 'getSubmit']);
